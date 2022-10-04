@@ -11,47 +11,47 @@ function loadCardForm() {
         id: "form-checkout",
         cardholderName: {
             id: "form-checkout__cardholderName",
-            placeholder: "Holder name",
+            placeholder: "Nome do Titular",
         },
         cardholderEmail: {
             id: "form-checkout__cardholderEmail",
-            placeholder: "E-mail",
+            placeholder: "E-mail"
         },
         cardNumber: {
             id: "form-checkout__cardNumber",
-            placeholder: "Card number",
+            placeholder: "Número do Cartão",
             style: {
                 fontSize: "1rem"
             },
         },
         expirationDate: {
             id: "form-checkout__expirationDate",
-            placeholder: "MM/YYYY",
+            placeholder: "mm/AAAA",
             style: {
                 fontSize: "1rem"
             },
         },
         securityCode: {
             id: "form-checkout__securityCode",
-            placeholder: "Security code",
+            placeholder: "Código de Segurança",
             style: {
                 fontSize: "1rem"
             },
         },
         installments: {
             id: "form-checkout__installments",
-            placeholder: "Installments",
+            placeholder: "Parcelas",
         },
         identificationType: {
             id: "form-checkout__identificationType",
         },
         identificationNumber: {
             id: "form-checkout__identificationNumber",
-            placeholder: "Identification number",
+            placeholder: "Número de identificação",
         },
         issuer: {
             id: "form-checkout__issuer",
-            placeholder: "Issuer",
+            placeholder: "Emissor",
         },
     };
 
@@ -199,10 +199,10 @@ function updatePrice(){
     let unitPrice = document.getElementById('unit-price').innerText;
     let amount = parseInt(unitPrice) * parseInt(quantity);
 
-    document.getElementById('cart-total').innerText = '$ ' + amount;
-    document.getElementById('summary-price').innerText = '$ ' + unitPrice;
+    document.getElementById('cart-total').innerText = 'R$ ' + amount;
+    document.getElementById('summary-price').innerText = 'R$ ' + unitPrice;
     document.getElementById('summary-quantity').innerText = quantity;
-    document.getElementById('summary-total').innerText = '$ ' + amount;
+    document.getElementById('summary-total').innerText = 'R$ ' + amount;
     document.getElementById('amount').value = amount;
 };
 
