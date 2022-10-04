@@ -62,8 +62,8 @@ function loadCardForm() {
         callbacks: {
             onFormMounted: error => {
                 if (error)
-                    return console.warn("Form Mounted handling error: ", error);
-                console.log("Form mounted");
+                    return console.warn("Erro de manipulação de formulário montado: ", error);
+                console.log("Formulário montado");
             },
             onSubmit: event => {
                 event.preventDefault();
@@ -114,7 +114,8 @@ function loadCardForm() {
                             document.getElementById("error-message").textContent = result.error_message;
                             document.getElementById("fail-response").style.display = "block";
                         }
-                        
+                        console.log(result);
+                        // O result.status sendo igual a "approved" podemos gravar no banco de dados
                         $('.container__payment').fadeOut(500);
                         setTimeout(() => { $('.container__result').show(500).fadeIn(); }, 500);
                     })
@@ -123,7 +124,7 @@ function loadCardForm() {
                     });
             },
             onFetching: (resource) => {
-                console.log("Fetching resource: ", resource);
+                console.log("Buscando recurso: ", resource);
                 payButton.setAttribute('disabled', true);
                 return () => {
                     payButton.removeAttribute("disabled");
